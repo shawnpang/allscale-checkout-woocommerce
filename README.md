@@ -8,7 +8,7 @@ A WordPress/WooCommerce payment gateway plugin that lets merchants accept crypto
 - **Low fees** — 0.5% per transaction (vs ~3-5% on traditional processors).
 - **Instant settlement** — On-chain USDT, no waiting days for payouts.
 - **No account freezes** — Your funds are on-chain and always accessible.
-- **No KYC required** — Get started immediately.
+- **Permissionless setup** — Self-custodial, so you can start accepting payments right away.
 - **163 fiat currencies supported** — USD, EUR, GBP, JPY, and many more.
 
 ## How It Works
