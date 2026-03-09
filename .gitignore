@@ -1,0 +1,29 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Composer
+vendor/
+composer.lock
+
+# Node (build tooling)
+node_modules/
+
+# Logs
+*.log
+debug.log
