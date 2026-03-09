@@ -23,10 +23,9 @@ A WordPress/WooCommerce payment gateway plugin that lets merchants accept crypto
 - **WooCommerce payment gateway** — Shows up as a payment option at checkout.
 - **Automatic order management** — Orders update in real time based on payment status.
 - **Webhook verification** — Cryptographically verifies all incoming webhook notifications (HMAC-SHA256).
-- **Status polling fallback** — Polls the Allscale API for payment status in case a webhook is missed.
 - **Sandbox mode** — Test the full flow without real transactions.
-- **Configurable currency** — Choose which fiat currency to denominate prices in.
-- **Secure by design** — API secrets stored encrypted in WordPress, all signing done server-side, timing-safe signature comparison.
+- **Currency auto-detection** — Automatically uses your WooCommerce store currency for pricing.
+- **Secure by design** — All API signing done server-side, timing-safe signature comparison.
 
 ## Requirements
 
@@ -46,7 +45,7 @@ Or clone directly into your plugins directory:
 
 ```bash
 cd wp-content/plugins/
-git clone https://github.com/YOUR_USERNAME/allscale-checkout-woocommerce.git allscale-checkout
+git clone https://github.com/shawnpang/allscale-checkout-woocommerce.git allscale-checkout
 ```
 
 ## Configuration
@@ -55,12 +54,11 @@ git clone https://github.com/YOUR_USERNAME/allscale-checkout-woocommerce.git all
 2. Enable the payment method.
 3. Enter your **API Key** and **API Secret** (obtained from the Allscale dashboard).
 4. Select your **environment** (Sandbox for testing, Production for live).
-5. Choose your **currency** (must match your WooCommerce store currency).
-6. Set your **Webhook URL** in the Allscale dashboard to:
+5. Set your **Webhook URL** in the Allscale dashboard to:
    ```
    https://yoursite.com/wc-api/allscale_checkout
    ```
-7. Save changes and you're ready to accept payments.
+6. Save changes and you're ready to accept payments.
 
 ## Allscale Setup
 
@@ -74,7 +72,7 @@ git clone https://github.com/YOUR_USERNAME/allscale-checkout-woocommerce.git all
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/allscale-checkout-woocommerce.git
+git clone https://github.com/shawnpang/allscale-checkout-woocommerce.git
 cd allscale-checkout-woocommerce
 
 # For local WordPress development, symlink into your plugins directory

@@ -107,7 +107,17 @@ class Allscale_Webhook {
     }
 
     /**
-     * Update WooCommerce order based on Allscale payment data.
+     * Update WooCommerce order based on Allscale webhook data.
+     *
+     * The documented webhook payload fields are:
+     *   all_scale_transaction_id, all_scale_checkout_intent_id,
+     *   amount_cents, amount_coins, currency, chain_id, tx_hash,
+     *   tx_from, coin_contract_address, user_id, order_id,
+     *   user_name, extra_obj
+     *
+     * Note: A "status" field is not documented. Webhooks appear to fire
+     * on successful payment confirmation. If a "status" field is present,
+     * we handle it; otherwise we treat the webhook as a payment confirmation.
      */
     private function process_payment_update($data) {
         $intent_id = isset($data['all_scale_checkout_intent_id']) ? sanitize_text_field($data['all_scale_checkout_intent_id']) : '';
@@ -129,17 +139,19 @@ class Allscale_Webhook {
         $order = $orders[0];
 
         // Don't update orders that are already in a terminal state
-        if (in_array($order->get_status(), ['completed', 'refunded'], true)) {
+        if (in_array($order->get_status(), ['completed', 'refunded', 'processing'], true)) {
             return;
         }
 
-        $status = isset($data['status']) ? intval($data['status']) : null;
         $tx_hash = isset($data['tx_hash']) ? sanitize_text_field($data['tx_hash']) : '';
 
         if ($tx_hash) {
             $order->update_meta_data('_allscale_tx_hash', $tx_hash);
             $order->save();
         }
+
+        // If a status field is present, use it; otherwise treat as confirmation
+        $status = isset($data['status']) ? intval($data['status']) : self::STATUS_CONFIRMED;
 
         switch ($status) {
             case self::STATUS_CONFIRMED:

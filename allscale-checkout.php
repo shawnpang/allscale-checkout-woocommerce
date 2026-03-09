@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Allscale Checkout for WooCommerce
- * Description: Accept crypto payments via Allscale. Customers pay in fiat, you receive USDT stablecoin instantly.
+ * Description: Accept crypto payments via Allscale. Prices in local currency, settled as USDT stablecoin.
  * Version: 1.0.0
  * Author: Shawn Pang
  * Requires at least: 5.8
