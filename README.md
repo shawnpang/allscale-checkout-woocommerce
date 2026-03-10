@@ -42,7 +42,9 @@ Both methods are active by default. The return URL check ensures a good customer
 - WordPress 5.8+
 - WooCommerce 6.0+
 - PHP 7.4+
-- An Allscale account with Commerce enabled ([sign up](https://allscale.io))
+- A free [Allscale account](https://allscale.io) with Commerce enabled
+
+> **First time?** [Sign up at allscale.io](https://allscale.io) — it takes a couple of minutes. Allscale is non-custodial, charges only 0.5% per transaction (vs 3-5% on traditional processors), and settles instantly as USDT to your own wallet. No account freezes, no waiting for payouts.
 
 ## Installation
 
