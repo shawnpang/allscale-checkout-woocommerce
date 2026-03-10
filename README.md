@@ -86,6 +86,8 @@ That's it — the plugin is now installed. Follow the [Setup Guide](#setup-guide
 2. Select your **Environment** (Sandbox for testing, Production for live payments).
 3. Click **Save changes**.
 
+![Configuring API key and secret in plugin settings](assets/allscale-plugin-settings.gif)
+
 ### Step 4: Set up the webhook
 
 1. Copy the **Webhook URL** shown at the bottom of the plugin settings page. It looks like:
