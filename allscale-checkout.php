@@ -6,6 +6,8 @@
  * Author: Shawn Pang
  * Requires at least: 5.8
  * Requires PHP: 7.4
+ * WC requires at least: 6.0
+ * WC tested up to: 9.6
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -16,6 +18,13 @@ if (!defined('ABSPATH')) {
 
 define('ALLSCALE_CHECKOUT_VERSION', '1.0.0');
 define('ALLSCALE_CHECKOUT_PATH', plugin_dir_path(__FILE__));
+
+// Declare HPOS compatibility
+add_action('before_woocommerce_init', function () {
+    if (class_exists('\Automattic\WooCommerce\Utilities\FeaturesUtil')) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
+    }
+});
 
 add_action('plugins_loaded', 'allscale_checkout_init');
 
