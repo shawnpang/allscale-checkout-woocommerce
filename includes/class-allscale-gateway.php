@@ -8,9 +8,11 @@ class Allscale_Gateway extends WC_Payment_Gateway {
 
     public function __construct() {
         $this->id                 = 'allscale_checkout';
-        $this->method_title       = 'Allscale Checkout';
-        $this->method_description = 'Accept crypto payments with 0.5% fees, instant USDT settlement, and no account freezes. '
-            . 'Funds go directly to your wallet. <a href="https://allscale.io" target="_blank">Create a free Allscale account</a> to get started.';
+        $this->method_title       = 'Allscale Checkout (Beta)';
+        $this->method_description = '<strong>Community beta</strong> — developed by the AllScale community, not an official release. '
+            . 'Your assets are always safe thanks to Allscale\'s non-custodial design (funds go directly to your wallet, never held by a third party). '
+            . '0.5% fees, instant USDT settlement, no account freezes. '
+            . '<a href="https://allscale.io" target="_blank">Create a free Allscale account</a> to get started.';
         $this->has_fields         = false;
         $this->icon               = plugins_url('assets/icon.png', dirname(__FILE__));
 

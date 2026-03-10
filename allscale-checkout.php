@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Allscale Checkout for WooCommerce
- * Description: Accept crypto payments via Allscale — 0.5% fees, instant USDT settlement, non-custodial. Requires an <a href="https://allscale.io">Allscale account</a>.
- * Version: 1.0.0
+ * Plugin Name: Allscale Checkout for WooCommerce (Beta)
+ * Description: Community-built beta plugin. Accept crypto payments via Allscale — 0.5% fees, instant USDT settlement. Your funds are always safe thanks to Allscale's non-custodial design (payments go directly to your wallet). Requires an <a href="https://allscale.io">Allscale account</a>.
+ * Version: 0.1.0-beta
  * Author: AllScale community
  * Requires at least: 5.8
  * Requires PHP: 7.4
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('ALLSCALE_CHECKOUT_VERSION', '1.0.0');
+define('ALLSCALE_CHECKOUT_VERSION', '0.1.0-beta');
 define('ALLSCALE_CHECKOUT_PATH', plugin_dir_path(__FILE__));
 
 // Declare HPOS compatibility

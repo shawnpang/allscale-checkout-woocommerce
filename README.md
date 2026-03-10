@@ -1,4 +1,6 @@
-# Allscale Checkout for WooCommerce
+# Allscale Checkout for WooCommerce (Beta)
+
+> **Community beta** — This plugin is developed by the AllScale community and is not an official release. Your assets are always safe thanks to Allscale's non-custodial design: payments go directly to your wallet and are never held by a third party.
 
 A WordPress/WooCommerce payment gateway plugin that lets merchants accept crypto payments via [Allscale Checkout](https://allscale.io). Prices are displayed in your store's local currency, and funds settle instantly as **USDT stablecoin** directly to the merchant's wallet.
 
