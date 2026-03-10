@@ -11,6 +11,7 @@ class Allscale_Gateway extends WC_Payment_Gateway {
         $this->method_title       = 'Allscale Checkout';
         $this->method_description = 'Accept crypto payments via Allscale. Prices in local currency, settled as USDT.';
         $this->has_fields         = false;
+        $this->icon               = plugins_url('assets/icon.png', dirname(__FILE__));
 
         $this->init_form_fields();
         $this->init_settings();
