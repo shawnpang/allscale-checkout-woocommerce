@@ -55,6 +55,8 @@ Both methods are active by default. The return URL check ensures a good customer
 3. Upload the ZIP file and click **Install Now**.
 4. Click **Activate**.
 
+![Installing and activating the plugin](assets/install-activate-woocommerce.gif)
+
 That's it — the plugin is now installed. Follow the [Setup Guide](#setup-guide) below to configure it.
 
 ## Setup Guide
