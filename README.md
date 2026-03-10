@@ -84,7 +84,9 @@ That's it — the plugin is now installed. Follow the [Setup Guide](#setup-guide
    ```
    https://yoursite.com/wc-api/allscale_checkout
    ```
-2. In your Allscale dashboard, paste this URL as your store's webhook endpoint.
+2. In your Allscale dashboard, go to **Commerce** and paste this URL as your store's webhook endpoint.
+
+![Setting up the webhook in the Allscale dashboard](assets/setup-demo.gif)
 
 That's it — your store is now accepting crypto payments.
 
