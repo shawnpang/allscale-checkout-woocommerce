@@ -46,17 +46,12 @@ Both methods are active by default. The return URL check ensures a good customer
 
 ## Installation
 
-1. Download the latest release `.zip` file from [Releases](../../releases).
+1. [Download the ZIP](../../archive/refs/heads/main.zip) from GitHub (or click **Code → Download ZIP** on the repo page).
 2. In your WordPress admin, go to **Plugins → Add New → Upload Plugin**.
-3. Upload the `.zip` file and click **Install Now**.
-4. Activate the plugin.
+3. Upload the ZIP file and click **Install Now**.
+4. Click **Activate**.
 
-Or clone directly into your plugins directory:
-
-```bash
-cd wp-content/plugins/
-git clone https://github.com/shawnpang/allscale-checkout-woocommerce.git allscale-checkout
-```
+That's it — the plugin is now installed. Follow the [Setup Guide](#setup-guide) below to configure it.
 
 ## Setup Guide
 
